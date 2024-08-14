@@ -1,0 +1,153 @@
+
+:root{
+    --dark-cyan: hsl(158,36%,37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --normal :500;
+    --bold: 700;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: var(--normal);
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+
+  /* Start */
+  body{
+    background-color: var(--Cream);
+  }
+  main{
+    width: 90%;
+    max-width: 600px;
+    margin-inline: auto;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+
+    .container{
+        padding:40px 20px;
+
+        p{
+            color: var(--Dark-grayish-blue);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .first{
+            text-transform: uppercase;
+            letter-spacing:4px;
+            color: var(--Dark-grayish-blue);
+            font-size: .8rem;
+            margin-bottom: 10px;
+        }
+
+        h1{
+            font-size: 2.3rem;
+            font-family: Fraunces;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .price{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            .one{
+                color:var(--dark-cyan);
+                font-size: 2.5rem;
+                font-weight: var(--bold);
+                font-family: Fraunces;
+            }
+
+
+            .second{
+                color: var(--Dark-grayish-blue);
+                font-size: 1.5rem;
+                font-family: Fraunces;
+            }
+        }
+
+
+
+        a{  
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            text-decoration: none;
+            background-color: var(--dark-cyan);
+            color: white;
+            font-weight: var(--bold);
+            padding: 10px 45px; 
+            border-radius: 10px;
+            img{
+                display: inline-block;
+                width: 15px;
+                height: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 100px;
+        .image{
+            content: url(./images/image-product-desktop.jpg);
+            height: 100%;
+        }
+    }
+  }
